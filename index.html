@@ -62,6 +62,15 @@
               <li class="scroll-to-section"><a href="#services">Services</a></li>
               <li class="scroll-to-section"><a href="#about">About</a></li>
               <li class="scroll-to-section"><a href="#pricing">Pricing</a></li>
+              <a href="#" onclick="signOut();">Sign out</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
 <body>
 ...
   <button onclick="signOut()">Sign out</button>
@@ -97,6 +106,15 @@
 <head>
   ...
   <script src="https://apis.google.com/js/api.js" async defer></script>
+  <meta name="google-signin-client_id" content="674258570833-s1238rdjipu1egrpb4c4k13i619d1c8v.apps.googleusercontent.com">
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+  function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
 </head>
 </body>
    
