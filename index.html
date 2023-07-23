@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
 
 
   <head>
@@ -65,10 +65,7 @@
 <body>
 ...
   <button onclick="signOut()">Sign out</button>
-</body>
-              </body>
-
-          function signOut() {
+  function signOut() {
   gapi.auth2.getAuthInstance().signOut().then(function() {
     console.log('user signed out')
               </body>
