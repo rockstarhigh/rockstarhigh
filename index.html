@@ -64,12 +64,13 @@
               <li class="scroll-to-section"><a href="#pricing">Pricing</a></li>
               <a href="#" onclick="signOut();">Sign out</a>
 <script>
-  function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-  }
+function signOut() {
+  gapi.auth2.getAuthInstance().signOut().then(function() {
+      <button onclick="signOut()">Sign out</button>
+    console.log('user signed out')
+  })
+}
+
 </script>
 <body>    
               <li><div class="gradient-button"><a id="modal_trigger" href="#modal"><i class="fa fa-sign-in-alt"></i> Sign In Now</a></div></li> 
