@@ -2216,3 +2216,29 @@ responsive
     padding: 30px;
   }
 }
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'El Messiri', sans-serif;
+}
+
+body {
+  background: #031323;
+  overflow: hidden;
+}
+
+.fas {
+  width: 32px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
